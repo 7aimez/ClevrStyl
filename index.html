@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern CSS Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,7 +15,7 @@
             <div class="space-x-8 hidden md:flex">
                 <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
                 <a href="#features" class="nav-link text-gray-600 hover:text-blue-600 transition-colors duration-300">Features</a>
-                <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                <a href="#example" class="nav-link text-gray-600 hover:text-blue-600 transition-colors duration-300">Example</a>
             </div>
             <button id="hamburger-btn" class="md:hidden text-gray-600" aria-label="Open mobile menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -34,7 +35,7 @@
             <nav class="mt-12 space-y-6">
                 <a href="#home" class="block text-lg font-medium text-gray-600 hover:text-blue-600">Home</a>
                 <a href="#features" class="block text-lg font-medium text-gray-600 hover:text-blue-600">Features</a>
-                <a href="#contact" class="block text-lg font-medium text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="#example" class="block text-lg font-medium text-gray-600 hover:text-blue-600">Example</a>
             </nav>
         </div>
     </div>
@@ -50,7 +51,7 @@
                     Modern CSS Showcase
                 </h1>
                 <p class="text-lg md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-500">
-                    Explore sleek, modern web design with our custom CSS.
+                    Explore sleek, modern web design with our custom CSS and Tailwind.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <button onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })"
@@ -71,30 +72,28 @@
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4">Gradient Text</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">Vibrant, dynamic text with smooth gradient transitions.</p>
-                    <a href="#" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-8 rounded-full hover:from-blue-600 hover:to-purple-600 transition">Learn More</a>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4">Neon Glow</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">Subtle, glowing effects for cards and elements on hover.</p>
-                    <a href="#" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-8 rounded-full hover:from-blue-600 hover:to-purple-600 transition">Learn More</a>
                 </div>
                 <div class="card">
                     <h3 class="text-xl font-semibold mb-4">Smooth Animations</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">Elegant fade-in and pulse animations for a polished look.</p>
-                    <a href="#" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-8 rounded-full hover:from-blue-600 hover:to-purple-600 transition">Learn More</a>
                 </div>
             </div>
         </section>
 
         <div class="section-divider container mx-auto"></div>
 
-        <section id="contact" class="py-32 px-6 container mx-auto max-w-7xl bg-gray-50">
+        <section id="example" class="py-32 px-6 container mx-auto max-w-7xl bg-gray-50">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
-                Get in Touch
+                Example
             </h2>
             <div class="card mx-auto max-w-lg">
-                <p class="text-gray-600 mb-6 leading-relaxed">Reach out to learn more about our CSS styles or collaborate on your next project.</p>
-                <a href="mailto:info@example.com" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-8 rounded-full hover:from-blue-600 hover:to-purple-600 transition">Contact Us</a>
+                <h3 class="text-xl font-semibold mb-4 gradient-text">Sample Card</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">This card demonstrates the neon-glow and card-hover effects. Hover to see the subtle lift and glow.</p>
+                <p class="text-gray-600 leading-relaxed">The background features a Tailwind-powered gradient and subtle pulse animations for a modern, engaging look.</p>
             </div>
         </section>
     </main>
