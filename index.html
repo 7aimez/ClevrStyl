@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CSS Showcase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="container mx-auto flex justify-between items-center px-6">
+            <a href="#" class="text-2xl font-bold gradient-text">CSS Showcase</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
+                <a href="#features" class="nav-link text-gray-600 hover:text-blue-600 transition-colors duration-300">Features</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+            </div>
+            <button id="hamburger-btn" class="md:hidden text-gray-600" aria-label="Open mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900/90 z-50">
+        <div class="bg-white w-4/5 max-w-sm h-full ml-auto p-8">
+            <button id="close-menu-btn" class="ml-auto" aria-label="Close Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav class="mt-12 space-y-6">
+                <a href="#home" class="block text-lg font-medium text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#features" class="block text-lg font-medium text-gray-600 hover:text-blue-600">Features</a>
+                <a href="#contact" class="block text-lg font-medium text-gray-600 hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="pt-24">
+        <section id="home" class="relative h-screen flex items-center justify-center text-center p-6 overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <div class="absolute w-48 h-48 bg-blue-400 rounded-full blur-3xl opacity-30 subtle-pulse top-20 left-20"></div>
+                <div class="absolute w-72 h-72 bg-purple-200 rounded-full blur-8xl opacity-30 subtle-pulse animation-delay-2000 bottom-0 right-20"></div>
+            </div>
+            <div class="relative z-10 max-w-5xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight gradient-text animate-fade-in-up">
+                    Modern CSS Showcase
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-500">
+                    Explore sleek, modern web design with our custom CSS.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })"
+                        class="button-gradient animate-fade-in-up animation-delay-500">
+                        <span class="button-inner">Discover Features</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider container mx-auto"></div>
+
+        <section id="features" class="py-32 px-6 container mx-auto max-w-7xl">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+                Features
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Gradient Text</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Vibrant, dynamic text with smooth gradient transitions.</p>
+                    <a href="#" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-8 rounded-full hover:from-blue-600 hover:to-purple-600 transition">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Neon Glow</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Subtle, glowing effects for cards and elements on hover.</p>
+                    <a href="#" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-8 rounded-full hover:from-blue-600 hover:to-purple-600 transition">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Smooth Animations</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Elegant fade-in and pulse animations for a polished look.</p>
+                    <a href="#" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-8 rounded-full hover:from-blue-600 hover:to-purple-600 transition">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider container mx-auto"></div>
+
+        <section id="contact" class="py-32 px-6 container mx-auto max-w-7xl bg-gray-50">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+                Get in Touch
+            </h2>
+            <div class="card mx-auto max-w-lg">
+                <p class="text-gray-600 mb-6 leading-relaxed">Reach out to learn more about our CSS styles or collaborate on your next project.</p>
+                <a href="mailto:info@example.com" class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-8 rounded-full hover:from-blue-600 hover:to-purple-600 transition">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 CSS Showcase. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!mobileMenu.classList.contains("hidden") && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
+</body>
+</html>
